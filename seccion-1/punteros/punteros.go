@@ -1,14 +1,14 @@
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main () {
-	a, b := 10, 20
+// func main () {
+// 	a, b := 10, 20
 
-	fmt.Println("Valores iniciales: a =", a, ", b =", b)
+// 	fmt.Println("Valores iniciales: a =", a, ", b =", b)
 
-	ptrA := &a
-    *ptrA, b = b, *ptrA
+// 	ptrA := &a
+//     *ptrA, b = b, *ptrA
 	
-	fmt.Println("Valores intercambiados: a = ", a, ", b =", b)
-}
+// 	fmt.Println("Valores intercambiados: a = ", a, ", b =", b)
+// }
