@@ -26,36 +26,36 @@
 
 // V.2
 
-package main
+// package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
+// import (
+// 	"bufio"
+// 	"fmt"
+// 	"os"
+// 	"strings"
+// )
 
-func solicitud() string{
-	var oracion string
-	fmt.Println("Ingrese una oracion:")
-	lectura := bufio.NewReader(os.Stdin)
-	oracion, _ = lectura.ReadString('\n')
-	return oracion
-}
+// func solicitud() string{
+// 	var oracion string
+// 	fmt.Println("Ingrese una oracion:")
+// 	lectura := bufio.NewReader(os.Stdin)
+// 	oracion, _ = lectura.ReadString('\n')
+// 	return oracion
+// }
 
-func contador(){
-	var x string
-	x = solicitud()
-	palabras := strings.Fields(x)
+// func contador(){
+// 	var x string
+// 	x = solicitud()
+// 	palabras := strings.Fields(x)
 
-	resultado := make(map[string]int)
+// 	resultado := make(map[string]int)
 
-	for _, palabra := range palabras {
-		resultado[palabra]++
-	}
-	fmt.Println(resultado)
-}
+// 	for _, palabra := range palabras {
+// 		resultado[palabra]++
+// 	}
+// 	fmt.Println(resultado)
+// }
 
-func main(){
-	contador()
-}
+// func main(){
+// 	contador()
+// }
