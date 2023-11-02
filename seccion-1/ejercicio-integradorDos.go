@@ -77,8 +77,40 @@ func ordenarLista(estudiante []Estudiantes)  {
 	}
 }
 
+func buscarEstudiante(estudiante []Estudiantes) {
+	var aprobado int
+	fmt.Print("Ingrese (1) si desea ver la lista de aprobados o ingrese (2) si desea ver la lista de desaprobados: \n")
+	fmt.Scan(&aprobado)
+
+	if aprobado == 1 {
+		for i := 0; i < len(estudiante); i++ {
+			if estudiante[i].nota >= 4 {
+				fmt.Printf("%s aprobado\n", estudiante[i].nombre)
+			}
+		}
+	} else if aprobado == 2 {
+		for i := 0; i < len(estudiante); i++ {
+			if estudiante[i].nota < 4 {
+				fmt.Printf("%s desaprobado\n", estudiante[i].nombre)
+			}
+		}
+	} else {
+		fmt.Println(nil)
+	}
+}
+
 func main() {
-	estudiantes := crearEstudiantes()
-	ordenarLista(estudiantes)
+	for {
+		var centilenta string
+		fmt.Print("Ingrese '*' para salir: ")
+		fmt.Scan(&centilenta)
+		if centilenta == "*" {
+			break
+		} else {
+		estudiantes := crearEstudiantes()
+		ordenarLista(estudiantes)
+		buscarEstudiante(estudiantes)
+		}
+	}
 }
 
